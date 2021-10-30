@@ -2,7 +2,7 @@ use serde::{Serialize, Deserialize};
 
 /// Correlates to what probe on the Thirsty Controller the data reading is from
 #[derive(Serialize, Deserialize, Debug)]
-enum ProbePort {
+pub enum ProbePort {
   J1,
   J2,
   J3,
@@ -11,7 +11,7 @@ enum ProbePort {
 
 /// Message structure for controller probe data report
 #[derive(Serialize, Deserialize, Debug)]
-struct ControllerMessage {
+pub struct ControllerMessage {
   /// Controller Unique ID
   controller_id: String,
   /// Probe that reading is from
