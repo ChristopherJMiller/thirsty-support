@@ -13,9 +13,9 @@ pub enum ProbePort {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ControllerMessage {
   /// Controller Unique ID
-  controller_id: String,
+  pub controller_id: String,
   /// Probe that reading is from
-  probe: ProbePort,
+  pub probe: ProbePort,
   /// Value of the reading
-  value: u32
+  pub value: u32
 }
