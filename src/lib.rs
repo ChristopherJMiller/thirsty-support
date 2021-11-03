@@ -1,7 +1,7 @@
 use serde::{Serialize, Deserialize};
 
 /// Correlates to what probe on the Thirsty Controller the data reading is from
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone, Copy)]
 pub enum ProbePort {
   J1,
   J2,
