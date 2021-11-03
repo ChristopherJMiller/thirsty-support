@@ -9,6 +9,17 @@ pub enum ProbePort {
   J4
 }
 
+impl Into<String> for ProbePort {
+  fn into(self) -> String {
+    match self {
+      Self::J1 => "J1".to_string(),
+      Self::J2 => "J2".to_string(),
+      Self::J3 => "J3".to_string(),
+      Self::J4 => "J4".to_string()
+    }
+  }
+}
+
 /// Message structure for controller probe data report
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ControllerMessage {
